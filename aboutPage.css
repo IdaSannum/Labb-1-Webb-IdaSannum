@@ -38,6 +38,11 @@
     grid-area: left;
     background-color: #E7C6FF;
   }
+
+  .left img {
+    height: auto;
+    width: auto;
+  }
   
   /* Style the middle column */
   .middle {
@@ -51,6 +56,11 @@
   .right {
     grid-area: right;
     background-color: #B8C0FF;
+  }
+
+  .right img {
+    height: auto;
+    width: auto;
   }
   
   /* Style the footer */

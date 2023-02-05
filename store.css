@@ -38,6 +38,11 @@
     grid-area: left;
     background-color: #E7C6FF;
   }
+
+  .left img {
+    height: auto;
+    width: auto;
+  }
   
   /* Style the middle column */
   .middle {
@@ -51,6 +56,11 @@
   .right {
     grid-area: right;
     background-color: #B8C0FF;
+  }
+
+  .right img {
+    height: auto;
+    width: auto;
   }
   
   /* Style the footer */
@@ -73,7 +83,12 @@
     }
   }
 
+  .card {
+    margin: 10px;
+  }
+
   .card .card-img-top {
-    height:150px;
-    width: 150px;
+    height: min-content;
+    width:min-content;
+    padding-top: 10px;
   }
