@@ -1,27 +1,84 @@
+class Product {
+  constructor(name, image, price) {
+    this.name = name;
+    this.image = image;
+    this.price = price;
+  }
+}
+
+const productList = document.querySelector("#products");
+
 const products = [
   {
-    name: 'Tårta 1',
-    image: 'Images/cake1.png',
-    price: 300
+    name: "Tårta 1",
+    image: "Images/cake1.png",
+    price: 300,
   },
   {
-    name: 'Tårta 2',
-    image: 'Images/cake2.png',
-    price: 400
+    name: "Tårta 2",
+    image: "Images/cake2.png",
+    price: 400,
+  },
+  {
+    name: "Tårta 3",
+    image: "Images/cake3.png",
+    price: 350,
+  },
+  {
+    name: "Tårta 4",
+    image: "Images/cake4.png",
+    price: 400,
+  },
+  {
+    name: "Tårta 5",
+    image: "Images/cake5.png",
+    price: 300,
   },
 ];
 
-console.log('Mina produkter', products);
+for (const product of products) {
+  // Skapa element
+  const card = document.createElement("li");
+  const cardHeader = document.createElement("div");
+  const cardTitle = document.createElement("h4");
+  const cardBody = document.createElement("div");
+  const cardImage = document.createElement("img");
+  const cardFooter = document.createElement("div");
+  const cardPrice = document.createElement("span");
+  const addToCartButton = document.createElement("button");
 
-for (let i = 0; i < products.length; i++) {
-    console.log(products[i].name, products[i]);
+  // Styla element
+  card.classList.add("card", "col-md");
+  cardHeader.classList.add("card-header", "fw-bold");
+  cardTitle.classList.add("card-title");
+  cardBody.classList.add("card-body");
+  cardImage.classList.add("card-img-top");
+  cardFooter.classList.add("card-footer");
+  addToCartButton.classList.add("btn", "btn-info", "mx-3");
+
+  // Innehåll i element
+  cardTitle.innerText = product.name;
+  cardImage.src = product.image;
+  cardImage.alt = product.name;
+  cardPrice.innerText = product.price;
+  addToCartButton.innerText = "Add To Cart";
+
+  // Sätta event på element
+
+  // Lägg till element i dom
+  cardHeader.append(cardTitle);
+  cardBody.append(cardImage);
+  cardFooter.append(cardPrice, addToCartButton);
+  card.append(cardHeader, cardBody, cardFooter);
+  productList.append(card);
 }
 
-/*<div class="card col-md">
-              <img class="card-img-top" src="Images/cake1.png" alt="Cake 1" />
-              <div class="card-body">
-                <h4 class="card-title">Tårta 1</h4>
-                <span>300 kr</span>
-                <button class="btn btn-info">Lägg till i kundvagn</button>
-              </div>
-            </div>*/
+// const html = `<div class="card col-md">
+//               <img class="card-img-top" src=${product.image} alt="Cake 1" />
+//               <div class="card-body">
+//                 <h4 class="card-title">${product.name}</h4>
+//                 <span>${product.price} kr</span>
+//                 <button class="btn btn-info">Lägg till i kundvagn</button>
+//               </div>
+//             </div>`;
+//   productList.innerHTML += html;
