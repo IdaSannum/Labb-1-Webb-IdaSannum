@@ -1,80 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="aboutPage.css" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"
-  ></script>
-</head>
-<body>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
-            <div class="navbar-toggler-icon"></div>
-          </button>
-          <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a href="homePage.html" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="store.html" class="nav-link">Store</a>
-              </li>
-            </ul>
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-label="Expand Navigation"
+        >
+          <div class="navbar-toggler-icon"></div>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="homePage.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="store.html" class="nav-link">Store</a>
+            </li>
+            <li class="nav-item">
+              <a href="recipies.html" class="nav-link">Recipies</a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-info"
+          data-bs-toggle="modal"
+          data-bs-target="#minModal"
+        >
+          <i class="bi bi-cart"></i>
+          <span id="countProducts" class="badge badge-pill badge-light">0</span>
+          Shopping Cart
+        </button>
+        <div
+          class="modal fade"
+          id="minModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Shopping Cart
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">Your Products</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Pay</button>
+              </div>
+            </div>
           </div>
-          <a href="#" class="btn btn-info btn-lg">
-            <i class="bi bi-cart"></i>
-            <span class="badge badge-pill badge-light">2</span> Shopping Cart
-          </a>
-        </div>
-      </nav>
-
-
-    <div class="grid-container">
-        <div class="header">
-          <h2>About Us</h2>
-        </div>
-        
-        <div class="left">
-          <img src="Images/pinkHearts.png" alt="rosa hjärtan">
-        </div>
-        <div class="middle">
-          <p>
-            Jag har alltid gillat att baka och mina bakverk är uppskattade bland familj och vänner. Idas kakor böjade som ett litet sidoprojekt 2018, där jag hjälpt nära och kära att baka till olika tillställningar. Intresset för mina bakverk spred sig så småningom till vänners vänner och bekanta. Först 2020 vågade jag satsa fullt ut. Idas kakor gick från att vara ett sidoprojekt till att vara min huvudsyssla.
-            <br>
-            <h3>Ni hittar oss i Mitt i City:</h3>
-            <p>Adress<br>
-            Telefonnummer<br>
-            E-mail<br>
-            Instagram<br></p> 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1522.4056086921194!2d13.500888509285549!3d59.38022787160138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb3d1559ec8af%3A0x7202fa09fe7eba03!2sMitt%20i%20city!5e0!3m2!1ssv!2sse!4v1675371048396!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
-        </div>  
-        <div class="right">
-          <img src="Images/chokladmuffins.png" alt="chokladmuffins">
-        </div>
-        
-        <div class="footer">
-          <p>Footer</p>
         </div>
       </div>
-      
-</body>
+    </nav>
+
+    <div class="grid-container">
+      <div class="header">
+        <h2>About Us</h2>
+      </div>
+
+      <div class="left">
+        <img src="Images/pinkHearts.png" alt="rosa hjärtan" />
+      </div>
+      <div class="middle">
+        <p>
+          Jag har alltid gillat att baka och mina bakverk är uppskattade bland
+          familj och vänner. Idas kakor böjade som ett litet sidoprojekt 2018,
+          där jag hjälpt nära och kära att baka till olika tillställningar.
+          Intresset för mina bakverk spred sig så småningom till vänners vänner
+          och bekanta. Först 2020 vågade jag satsa fullt ut. Idas kakor gick
+          från att vara ett sidoprojekt till att vara min huvudsyssla.
+          <br />
+        </p>
+
+        <h3>Ni hittar oss i Mitt i City:</h3>
+        <p>
+          Adress<br />
+          Telefonnummer<br />
+          E-mail<br />
+          Instagram<br />
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1522.4056086921194!2d13.500888509285549!3d59.38022787160138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb3d1559ec8af%3A0x7202fa09fe7eba03!2sMitt%20i%20city!5e0!3m2!1ssv!2sse!4v1675371048396!5m2!1ssv!2sse"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="right">
+        <img src="Images/chokladmuffins.png" alt="chokladmuffins" />
+      </div>
+
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+    </div>
+  </body>
 </html>

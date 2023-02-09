@@ -55,16 +55,42 @@
           </ul>
         </div>
 
-        <a href="#" class="btn btn-info btn-lg">
+
+        <button
+          type="button"
+          class="btn btn-info"
+          data-bs-toggle="modal"
+          data-bs-target="#minModal"
+          >
           <i class="bi bi-cart"></i>
-          <span class="badge badge-pill badge-light">2</span> Shopping Cart
-        </a>
+          <span id="countProducts" class="badge badge-pill badge-light">0</span> 
+          Shopping Cart        
+        </button>
+        <div class="modal fade" id="minModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Shopping Cart</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Your Products
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Pay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </nav>
 
     <div class="grid-container">
       <div class="header">
-        <h2>Store</h2>
+        <h2>Recipies</h2>
       </div>
 
       <div class="left">
@@ -72,7 +98,7 @@
       </div>
       <div class="middle">
         <section class="container">
-          <h2>Tårtor</h2>
+          <h2>Chocolate Inspiration!</h2>
           <div class="row">
             <ul id="products" class="list-group">
               

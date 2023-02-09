@@ -7,6 +7,8 @@ class Product {
 }
 
 const productList = document.querySelector("#products");
+const countProductsDisplay = document.querySelector("#countProducts");
+let countProducts = 0;
 
 const products = [
   {
@@ -65,6 +67,21 @@ for (const product of products) {
 
   // Sätta event på element
 
+  addToCartButton.onclick = () => {
+    // Lägg till produkten i kundvagnen
+
+    // if(lista > 0) {
+    //   // Lägg till produkt i listan
+    // }
+    // else {
+    //   // skapa en ny lista
+    // }
+
+    // Plus 1 i antal produkter i kundvagnen
+    countProducts++;
+    countProductsDisplay.innerText = countProducts;
+  };
+
   // Lägg till element i dom
   cardHeader.append(cardTitle);
   cardBody.append(cardImage);
@@ -82,3 +99,5 @@ for (const product of products) {
 //               </div>
 //             </div>`;
 //   productList.innerHTML += html;
+
+var removeCartItemButtons = document.getElementsByClassName('btn-danger');
