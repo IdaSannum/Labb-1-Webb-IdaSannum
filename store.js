@@ -48,15 +48,18 @@ for (const product of products) {
   const cardFooter = document.createElement("div");
   const cardPrice = document.createElement("span");
   const addToCartButton = document.createElement("button");
+  const moreInfoButton = document.createElement("button");
 
   // Styla element
-  card.classList.add("card", "col-md");
-  cardHeader.classList.add("card-header", "fw-bold");
-  cardTitle.classList.add("card-title");
+  card.classList.add("card", "col-md", "shop-items");
+  cardHeader.classList.add("card-header", "fw-bold", "shop-item");
+  cardTitle.classList.add("card-title", "shop-item-title");
   cardBody.classList.add("card-body");
-  cardImage.classList.add("card-img-top");
-  cardFooter.classList.add("card-footer");
-  addToCartButton.classList.add("btn", "btn-info", "mx-3");
+  cardImage.classList.add("card-img-top", "shop-item-image");
+  cardFooter.classList.add("card-footer", "shop-item-details");
+  cardPrice.classList.add("shop-item-price");
+  addToCartButton.classList.add("btn", "btn-info", "mx-3", "shop-item-button");
+  moreInfoButton.classList.add("btn", "btn-secondary", "mx-3");
 
   // Innehåll i element
   cardTitle.innerText = product.name;
@@ -64,6 +67,7 @@ for (const product of products) {
   cardImage.alt = product.name;
   cardPrice.innerText = product.price;
   addToCartButton.innerText = "Add To Cart";
+  moreInfoButton.innerText = "More Info";
 
   // Sätta event på element
 
@@ -82,10 +86,14 @@ for (const product of products) {
     countProductsDisplay.innerText = countProducts;
   };
 
+  // moreInfoButton.onclick () => {
+
+  // };
+
   // Lägg till element i dom
   cardHeader.append(cardTitle);
   cardBody.append(cardImage);
-  cardFooter.append(cardPrice, addToCartButton);
+  cardFooter.append(cardPrice, addToCartButton, moreInfoButton);
   card.append(cardHeader, cardBody, cardFooter);
   productList.append(card);
 }
@@ -100,4 +108,3 @@ for (const product of products) {
 //             </div>`;
 //   productList.innerHTML += html;
 
-var removeCartItemButtons = document.getElementsByClassName('btn-danger');
