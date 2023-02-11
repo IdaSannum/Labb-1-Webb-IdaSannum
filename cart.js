@@ -100,7 +100,7 @@ if(document.readyState == 'loading') {
     cartPrice.innerText = price
     // cartQuantity.innerText = 0
     cartQuantityInput.type = 'Number'
-    cartQuantityInput.value = 0
+    cartQuantityInput.value = 1
     cartRemoveButton.innerText = 'REMOVE'
     // Sätta event på element?
 
