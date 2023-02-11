@@ -1,40 +1,50 @@
-class Product {
-  constructor(name, image, price) {
-    this.name = name;
-    this.image = image;
-    this.price = price;
-  }
-}
+// class Product {
+//   constructor(name, image, price, moreInfo) {
+//     this.name = name;
+//     this.image = image;
+//     this.price = price;
+//     this.moreInfo = moreInfo;
+//   }
+// }
 
 const productList = document.querySelector("#products");
-const countProductsDisplay = document.querySelector("#countProducts");
-let countProducts = 0;
+
 
 const products = [
   {
-    name: "Tårta 1",
+    id: 1,
+    name: "Cake 1",
     image: "Images/cake1.png",
     price: 300,
+    moreInfo: "Mer information om tårta 1",
   },
   {
-    name: "Tårta 2",
+    id: 2,
+    name: "Cake 2",
     image: "Images/cake2.png",
     price: 400,
+    moreInfo: "Mer information om tårta 2",
   },
   {
-    name: "Tårta 3",
+    id: 3,
+    name: "Cake 3",
     image: "Images/cake3.png",
     price: 350,
+    moreInfo: "Mer information om tårta 3",
   },
   {
-    name: "Tårta 4",
+    id: 4,
+    name: "Cake 4",
     image: "Images/cake4.png",
     price: 400,
+    moreInfo: "Mer information om tårta 4",
   },
   {
-    name: "Tårta 5",
+    id: 5,
+    name: "Cake 5",
     image: "Images/cake5.png",
     price: 300,
+    moreInfo: "Mer information om tårta 5",
   },
 ];
 
@@ -50,6 +60,7 @@ for (const product of products) {
   const addToCartButton = document.createElement("button");
   const moreInfoButton = document.createElement("button");
 
+
   // Styla element
   card.classList.add("card", "col-md", "shop-items");
   cardHeader.classList.add("card-header", "fw-bold", "shop-item");
@@ -59,7 +70,12 @@ for (const product of products) {
   cardFooter.classList.add("card-footer", "shop-item-details");
   cardPrice.classList.add("shop-item-price");
   addToCartButton.classList.add("btn", "btn-info", "mx-3", "shop-item-button");
-  moreInfoButton.classList.add("btn", "btn-secondary", "mx-3");
+  moreInfoButton.classList.add(
+    "btn",
+    "btn-secondary",
+    "mx-3",
+    "shop-item-more-info"
+  );
 
   // Innehåll i element
   cardTitle.innerText = product.name;
@@ -68,29 +84,10 @@ for (const product of products) {
   cardPrice.innerText = product.price;
   addToCartButton.innerText = "Add To Cart";
   moreInfoButton.innerText = "More Info";
+  moreInfoButton.setAttribute("data-bs-toggle", "modal");
+  moreInfoButton.setAttribute("data-bs-target", "#more-info-modal");
+  moreInfoButton.setAttribute("data-shop-item-id", product.id);
 
-  // Sätta event på element
-
-  // addToCartButton.onclick = () => {
-  //   // Lägg till produkten i kundvagnen
-
-  //   // if(lista > 0) {
-  //   //   // Lägg till produkt i listan
-  //   // }
-  //   // else {
-  //   //   // skapa en ny lista
-  //   // }
-
-  //   // Plus 1 i antal produkter i kundvagnen
-  //   countProducts++;
-  //   countProductsDisplay.innerText = countProducts;
-  // };
-
-  
-
-  // moreInfoButton.onclick () => {
-
-  // };
 
   // Lägg till element i dom
   cardHeader.append(cardTitle);
@@ -100,13 +97,23 @@ for (const product of products) {
   productList.append(card);
 }
 
-// const html = `<div class="card col-md">
-//               <img class="card-img-top" src=${product.image} alt="Cake 1" />
-//               <div class="card-body">
-//                 <h4 class="card-title">${product.name}</h4>
-//                 <span>${product.price} kr</span>
-//                 <button class="btn btn-info">Lägg till i kundvagn</button>
-//               </div>
-//             </div>`;
-//   productList.innerHTML += html;
+var moreInfoButtons = document.getElementsByClassName("shop-item-more-info");
+for (const button of moreInfoButtons) {
+  button.addEventListener("click", moreInfoClicked);
+}
 
+function moreInfoClicked(event) {
+  const button = event.target;
+  const itemId = parseInt(button.getAttribute("data-shop-item-id"));
+  const shopItem = products.find(p => p.id === itemId);
+  
+  const imageElement = document.getElementById("more-info-item-image");
+  const titleElement = document.getElementById("more-info-item-title");
+  const moreInfoElement = document.getElementById("more-info-item-text");
+
+  titleElement.innerText = shopItem.name;
+  imageElement.src = shopItem.image;
+  imageElement.alt = shopItem.name;
+  moreInfoElement.innerText = shopItem.moreInfo;
+
+}
