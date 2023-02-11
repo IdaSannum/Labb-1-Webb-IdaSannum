@@ -93,34 +93,37 @@ if(document.readyState == 'loading') {
 
     // Innehåll i element
     cartImage.src = imageSrc
-    // cartImage.alt =
+    cartImage.alt = title
     cartImage.height = 50
     cartImage.width = 50
     cartItemTitle.innerText = title
     cartPrice.innerText = price
-    // cartQuantity.innerText = 0
     cartQuantityInput.type = 'Number'
     cartQuantityInput.value = 1
     cartRemoveButton.innerText = 'REMOVE'
-    // Sätta event på element?
 
     // Lägg till elemenet i dom
-
-    // <div class="cart-item cart-column">
-    //  <img src="Images/pinkHearts.png" height="50px" width="50px"/>
-    //  <span class="cart-item-title">Cake 10</span>
-    // </div>
-    // <span class="cart-price cart-column">300 kr</span>
-    // <div class="cart-quantity cart-column">
-    //     <input class="cart-quantity-input" type="number"value="0"/>
-    //     <button type="button" class="btn btn-danger cart-quantity-button"> Remove </button>
-    // </div>
     cartItem.append(cartImage, cartItemTitle)
     cartQuantity.append(cartQuantityInput,cartRemoveButton)
     cartRow.append(cartItem, cartPrice, cartQuantity)
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+
+    // addToCartButton.onclick = () => {
+  //   // Lägg till produkten i kundvagnen
+
+  //   // if(lista > 0) {
+  //   //   // Lägg till produkt i listan
+  //   // }
+  //   // else {
+  //   //   // skapa en ny lista
+  //   // }
+
+  //   // Plus 1 i antal produkter i kundvagnen
+  //   countProducts++;
+  //   countProductsDisplay.innerText = countProducts;
+  // };
   }
   
   

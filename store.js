@@ -71,20 +71,22 @@ for (const product of products) {
 
   // Sätta event på element
 
-  addToCartButton.onclick = () => {
-    // Lägg till produkten i kundvagnen
+  // addToCartButton.onclick = () => {
+  //   // Lägg till produkten i kundvagnen
 
-    // if(lista > 0) {
-    //   // Lägg till produkt i listan
-    // }
-    // else {
-    //   // skapa en ny lista
-    // }
+  //   // if(lista > 0) {
+  //   //   // Lägg till produkt i listan
+  //   // }
+  //   // else {
+  //   //   // skapa en ny lista
+  //   // }
 
-    // Plus 1 i antal produkter i kundvagnen
-    countProducts++;
-    countProductsDisplay.innerText = countProducts;
-  };
+  //   // Plus 1 i antal produkter i kundvagnen
+  //   countProducts++;
+  //   countProductsDisplay.innerText = countProducts;
+  // };
+
+  
 
   // moreInfoButton.onclick () => {
 
