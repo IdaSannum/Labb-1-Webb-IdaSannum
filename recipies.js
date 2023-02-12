@@ -26,7 +26,6 @@ for (const product of products) {
   const cardImage = document.createElement("img");
   const cardFooter = document.createElement("div");
   const cardPrice = document.createElement("span");
-  const addToCartButton = document.createElement("button");
 
   // Styla element
   card.classList.add("card", "col-md");
@@ -35,7 +34,6 @@ for (const product of products) {
   cardBody.classList.add("card-body");
   cardImage.classList.add("card-img-top");
   cardFooter.classList.add("card-footer");
-  addToCartButton.classList.add("btn", "btn-info", "mx-3");
 
   // Innehåll i element
   cardTitle.innerText = product.name;
@@ -44,24 +42,11 @@ for (const product of products) {
   cardImage.height = 150;
   cardImage.width = 150;
   cardPrice.innerText = product.category;
-  addToCartButton.innerText = "Add To Cart";
-
-  // Sätta event på element
 
   // Lägg till element i dom
   cardHeader.append(cardTitle);
   cardBody.append(cardImage);
-  cardFooter.append(cardPrice, addToCartButton);
+  cardFooter.append(cardPrice);
   card.append(cardHeader, cardBody, cardFooter);
   productList.append(card);
 }
-
-// const html = `<div class="card col-md">
-//               <img class="card-img-top" src=${product.image} alt="Cake 1" />
-//               <div class="card-body">
-//                 <h4 class="card-title">${product.name}</h4>
-//                 <span>${product.price} kr</span>
-//                 <button class="btn btn-info">Lägg till i kundvagn</button>
-//               </div>
-//             </div>`;
-//   productList.innerHTML += html;
