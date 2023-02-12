@@ -3,7 +3,7 @@
   }
   
   body {
-    font-family: 'Tangerine', serif;
+    font-family: 'Tangerine', serif !important;
   }
 
   nav {
@@ -16,6 +16,7 @@
     padding: 30px;
     text-align: center;
     font-size: 35px;
+    font-family: 'Tangerine', serif;
   }
   
   .grid-container {
@@ -46,6 +47,7 @@
     grid-area: middle;
     background-color: #C8B6FF;
     overflow: scroll;
+    font-size: 20px;
   }
   
   .right {
