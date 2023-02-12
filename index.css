@@ -45,7 +45,6 @@
   .middle {
     grid-area: middle;
     background-color: #C8B6FF;
-    font-family: Gabriola;
     overflow: scroll;
   }
   
