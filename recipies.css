@@ -3,16 +3,19 @@
 }
 
 body {
+  font-family: 'Tangerine', serif;
+}
+
+nav {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   grid-area: header;
-  background-color: #ffd6ff;
+  background-color: #FFD6FF;
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  font-family: Gabriola;
 }
 
 .grid-container {
