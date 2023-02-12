@@ -40,8 +40,8 @@
   }
 
   .left img {
-    height: auto;
-    width: auto;
+    height: 200px;
+    width: 200px;
   }
   
   /* Style the middle column */
@@ -59,8 +59,8 @@
   }
 
   .right img {
-    height: auto;
-    width: auto;
+    height: 200px;
+    width: 200px;
   }
   
   /* Style the footer */

@@ -41,6 +41,8 @@ for (const product of products) {
   cardTitle.innerText = product.name;
   cardImage.src = product.image;
   cardImage.alt = product.name;
+  cardImage.height = 150;
+  cardImage.width = 150;
   cardPrice.innerText = product.category;
   addToCartButton.innerText = "Add To Cart";
 

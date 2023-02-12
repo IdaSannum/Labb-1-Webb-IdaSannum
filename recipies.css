@@ -6,7 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the header */
 .header {
   grid-area: header;
   background-color: #ffd6ff;
@@ -16,35 +15,30 @@ body {
   font-family: Gabriola;
 }
 
-/* The grid container */
 .grid-container {
   display: grid;
   grid-template-areas:
     "header header header header header header"
     "left middle middle middle middle right"
     "footer footer footer footer footer footer";
-  /* grid-column-gap: 10px; - if you want gap between the columns */
 }
 
 .left,
 .middle,
 .right {
   padding: 10px;
-  /* height: 300px; Should be removed. Only for demonstration */
 }
 
-/* Style the left column */
 .left {
   grid-area: left;
   background-color: #e7c6ff;
 }
 
 .left img {
-  height: auto;
-  width: auto;
+  height: 200px;
+  width: 200px;
 }
 
-/* Style the middle column */
 .middle {
   grid-area: middle;
   background-color: #c8b6ff;
@@ -52,18 +46,16 @@ body {
   overflow: scroll;
 }
 
-/* Style the right column */
 .right {
   grid-area: right;
   background-color: #b8c0ff;
 }
 
 .right img {
-  height: auto;
-  width: auto;
+  height: 200px;
+  width: 200px;
 }
 
-/* Style the footer */
 .footer {
   grid-area: footer;
   background-color: #bbd0ff;
@@ -88,7 +80,7 @@ body {
 }
 
 .card .card-img-top {
-  max-height: 200px;
-  max-width: 200px;
+  height: 150px;
+  width: 150px;
   padding-top: 10px;
 }
