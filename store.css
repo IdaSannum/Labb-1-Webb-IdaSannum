@@ -89,6 +89,10 @@
     padding-top: 10px;
   }
 
+  #cart-modal {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   .cart-header {
     font-weight: bold;
   }

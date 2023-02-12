@@ -1,14 +1,4 @@
-// class Product {
-//   constructor(name, image, price, moreInfo) {
-//     this.name = name;
-//     this.image = image;
-//     this.price = price;
-//     this.moreInfo = moreInfo;
-//   }
-// }
-
 const productList = document.querySelector("#products");
-
 
 const products = [
   {
@@ -60,7 +50,6 @@ for (const product of products) {
   const addToCartButton = document.createElement("button");
   const moreInfoButton = document.createElement("button");
 
-
   // Styla element
   card.classList.add("card", "col-md", "shop-items");
   cardHeader.classList.add("card-header", "fw-bold", "shop-item");
@@ -88,7 +77,6 @@ for (const product of products) {
   moreInfoButton.setAttribute("data-bs-target", "#more-info-modal");
   moreInfoButton.setAttribute("data-shop-item-id", product.id);
 
-
   // Lägg till element i dom
   cardHeader.append(cardTitle);
   cardBody.append(cardImage);
@@ -96,6 +84,8 @@ for (const product of products) {
   card.append(cardHeader, cardBody, cardFooter);
   productList.append(card);
 }
+
+loadCart();
 
 var moreInfoButtons = document.getElementsByClassName("shop-item-more-info");
 for (const button of moreInfoButtons) {
@@ -105,8 +95,8 @@ for (const button of moreInfoButtons) {
 function moreInfoClicked(event) {
   const button = event.target;
   const itemId = parseInt(button.getAttribute("data-shop-item-id"));
-  const shopItem = products.find(p => p.id === itemId);
-  
+  const shopItem = products.find((p) => p.id === itemId);
+
   const imageElement = document.getElementById("more-info-item-image");
   const titleElement = document.getElementById("more-info-item-title");
   const moreInfoElement = document.getElementById("more-info-item-text");
@@ -115,5 +105,4 @@ function moreInfoClicked(event) {
   imageElement.src = shopItem.image;
   imageElement.alt = shopItem.name;
   moreInfoElement.innerText = shopItem.moreInfo;
-
 }

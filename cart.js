@@ -1,10 +1,4 @@
-if (document.readyState == "loading") {
-  document.addEventListener("DOMContentLoaded", ready);
-} else {
-  ready();
-}
-
-function ready() {
+function loadCart() {
   const removeCartItemButtons = document.getElementsByClassName("btn-danger");
   for (const button of removeCartItemButtons) {
     button.addEventListener("click", removeCartItem);
